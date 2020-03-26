@@ -1,0 +1,85 @@
+
+prog_arg.o：     文件格式 elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+   4:	83 e4 f0             	and    $0xfffffff0,%esp
+   7:	ff 71 fc             	pushl  -0x4(%ecx)
+   a:	55                   	push   %ebp
+   b:	89 e5                	mov    %esp,%ebp
+   d:	57                   	push   %edi
+   e:	56                   	push   %esi
+   f:	53                   	push   %ebx
+  10:	51                   	push   %ecx
+  11:	83 ec 28             	sub    $0x28,%esp
+  14:	e8 fc ff ff ff       	call   15 <main+0x15>
+  19:	81 c3 02 00 00 00    	add    $0x2,%ebx
+  1f:	89 ce                	mov    %ecx,%esi
+  21:	c7 45 cc 00 00 00 00 	movl   $0x0,-0x34(%ebp)
+  28:	c7 45 d0 00 00 00 00 	movl   $0x0,-0x30(%ebp)
+  2f:	c7 45 d4 00 00 00 00 	movl   $0x0,-0x2c(%ebp)
+  36:	c7 45 d8 00 00 00 00 	movl   $0x0,-0x28(%ebp)
+  3d:	c7 45 dc 00 00 00 00 	movl   $0x0,-0x24(%ebp)
+  44:	c7 45 e4 00 00 00 00 	movl   $0x0,-0x1c(%ebp)
+  4b:	eb 2b                	jmp    78 <main+0x78>
+  4d:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+  50:	8d 14 85 00 00 00 00 	lea    0x0(,%eax,4),%edx
+  57:	8b 46 04             	mov    0x4(%esi),%eax
+  5a:	01 d0                	add    %edx,%eax
+  5c:	8b 00                	mov    (%eax),%eax
+  5e:	83 ec 04             	sub    $0x4,%esp
+  61:	50                   	push   %eax
+  62:	ff 75 e4             	pushl  -0x1c(%ebp)
+  65:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+  6b:	50                   	push   %eax
+  6c:	e8 fc ff ff ff       	call   6d <main+0x6d>
+  71:	83 c4 10             	add    $0x10,%esp
+  74:	83 45 e4 01          	addl   $0x1,-0x1c(%ebp)
+  78:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+  7b:	3b 06                	cmp    (%esi),%eax
+  7d:	7c ce                	jl     4d <main+0x4d>
+  7f:	e8 fc ff ff ff       	call   80 <main+0x80>
+  84:	89 45 e0             	mov    %eax,-0x20(%ebp)
+  87:	83 7d e0 00          	cmpl   $0x0,-0x20(%ebp)
+  8b:	74 02                	je     8f <main+0x8f>
+  8d:	eb fe                	jmp    8d <main+0x8d>
+  8f:	8b 46 04             	mov    0x4(%esi),%eax
+  92:	83 c0 04             	add    $0x4,%eax
+  95:	8b 38                	mov    (%eax),%edi
+  97:	e8 fc ff ff ff       	call   98 <main+0x98>
+  9c:	83 ec 04             	sub    $0x4,%esp
+  9f:	57                   	push   %edi
+  a0:	50                   	push   %eax
+  a1:	8d 83 14 00 00 00    	lea    0x14(%ebx),%eax
+  a7:	50                   	push   %eax
+  a8:	e8 fc ff ff ff       	call   a9 <main+0xa9>
+  ad:	83 c4 10             	add    $0x10,%esp
+  b0:	8b 46 04             	mov    0x4(%esi),%eax
+  b3:	83 c0 04             	add    $0x4,%eax
+  b6:	8b 00                	mov    (%eax),%eax
+  b8:	0f b6 00             	movzbl (%eax),%eax
+  bb:	3c 2f                	cmp    $0x2f,%al
+  bd:	75 29                	jne    e8 <main+0xe8>
+  bf:	83 ec 0c             	sub    $0xc,%esp
+  c2:	8d 83 4e 00 00 00    	lea    0x4e(%ebx),%eax
+  c8:	50                   	push   %eax
+  c9:	e8 fc ff ff ff       	call   ca <main+0xca>
+  ce:	83 c4 10             	add    $0x10,%esp
+  d1:	8b 46 04             	mov    0x4(%esi),%eax
+  d4:	83 c0 04             	add    $0x4,%eax
+  d7:	8b 00                	mov    (%eax),%eax
+  d9:	83 ec 08             	sub    $0x8,%esp
+  dc:	ff 76 04             	pushl  0x4(%esi)
+  df:	50                   	push   %eax
+  e0:	e8 fc ff ff ff       	call   e1 <main+0xe1>
+  e5:	83 c4 10             	add    $0x10,%esp
+  e8:	eb fe                	jmp    e8 <main+0xe8>
+
+Disassembly of section .text.__x86.get_pc_thunk.bx:
+
+00000000 <__x86.get_pc_thunk.bx>:
+   0:	8b 1c 24             	mov    (%esp),%ebx
+   3:	c3                   	ret    
